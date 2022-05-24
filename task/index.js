@@ -21,19 +21,26 @@ function validate() {
     console.log(storedUserData)
     var V_Email = document.getElementById("Email").value;
     var V_Password = document.getElementById("Password").value;
-    for (i = 0; i < storedUserData.length; i++) {
-        if (V_Email == storedUserData[i].email && V_Password == storedUserData[i].password) {
-            localStorage.setItem("uuid", `${V_Email}`)
-            window.location.replace('./MyList.html')
-            flag=1;
-        }     
+    if(storedUserData){
+        for (i = 0; i < storedUserData.length; i++) {
+        
+            if (V_Email == storedUserData[i].email && V_Password == storedUserData[i].password) {
+                localStorage.setItem("uuid", `${V_Email}`)
+                window.location.replace('./MyList.html')
+                 flag=1;
+         }     
+         }
+         if (flag==0)
+         {
+             document.querySelector(".alert").classList.add('active');
+             document.querySelector(".alert").innerHTML = 'Wrong email or password';
+         }
     }
-    if (flag==0)
-    {
-    document.querySelector(".alert").classList.add('active');
-    document.querySelector(".alert").innerHTML = 'Wrong email or password';
+    else
+     {
+        document.querySelector(".alert").classList.add('active');
+        document.querySelector(".alert").innerHTML = 'Wrong email or password';
     }
-
 }
 function allLetter(inputtxt) {
     var letters = /^[A-Za-z]+$/;
