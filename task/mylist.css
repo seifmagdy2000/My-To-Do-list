@@ -1,0 +1,89 @@
+body
+{
+    background-image: url(istockphoto-1135638647-170667a.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+   background-attachment: fixed;
+}
+.title
+{
+    text-align:  center;
+    margin-top: 5%;
+}
+.btn-Add
+{
+    background-color: white;
+    border-radius: 2px;
+    color: black;
+    border: 2px solid green;
+}
+.btn-Add:hover{
+    color: white;
+    border: green solid 2px;
+    background:green;
+  }
+  .form
+  {
+      margin: auto;
+      max-width: 80%;
+      text-align: center;
+  }
+  .btn-save
+  {
+    background-color: white;
+    border-radius: 2px;
+    color: goldenrod ;
+    border: 2px solid gold;
+  }
+  .btn-save:hover
+  {
+    background: gold;
+    color: white;
+    border-radius: 2px;
+  }
+  #edit-box
+  {
+      display: none;
+      max-width: 80%;
+      margin: auto;
+      margin-top: 10px;
+  }
+  .btn-cancel
+  {
+    background-color: white;
+    border-radius: 2px;
+    color: red ;
+    border: 2px solid red;
+  }
+  .btn-cancel:hover
+  {
+    background-color: red;
+    border-radius: 2px;
+    color: white ;
+    border: 2px solid red;
+  }
+  th
+  {
+      text-align: left;
+  }
+  td
+  {
+      background-color: aliceblue;
+      padding: 10px;
+      text-align: left;
+
+  }
+  #todo-list-header
+  {
+    display:block;
+  }
+  button {
+    cursor: pointer;
+  }
+  .isDone
+  {
+    background-color: white;
+    border-radius: 2px;
+    color: black;
+    border: 2px solid green;
+  }

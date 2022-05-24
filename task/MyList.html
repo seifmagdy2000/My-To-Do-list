@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>My To do list</title>
+        <link rel="stylesheet" href="mylist.css">
+    </head>
+    <body>
+        <div class="title">
+            <h1>My to do list</h1>
+            <p>Thing to be done :</p>
+        </div>
+        <div class="form">
+            <!--javascript:void(0); prevents refresh on click/ place holder = hint text -->
+            <form action="javascript:void(0);" method="POST" onsubmit="app.Add()"> 
+            <input type="text" id="add-todo" placeholder="Thing To-do" >
+            <button type="submit" class="btn-Add">Add</button>
+        </form>
+        <p>you have:</p>
+        <p id="counter"></p>
+        <table>
+            <tr class="to-do">
+                <th>
+                     <h3 id="todo-list-header">To-Do</h3>
+                </th>
+            </tr>
+                <tbody id="tasks">
+                </tbody>
+        </table>
+        </div>
+        <div id="edit-box" role="area-hidden">
+            <form action="javascript:void(0);" method="post" id="save-edit">
+                <input type="text" id="edit-todo">
+                <input type="submit" value="save" class="btn-save">
+                <input type="submit" value="cancel" class="btn-cancel">
+            </form>
+        </div>
+        <script src="MyList.js"></script>
+    </body>
+</html>
