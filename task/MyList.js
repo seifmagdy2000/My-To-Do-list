@@ -64,7 +64,7 @@ let app= new function()
           if (task) {
             // Edit value
             tasks.splice(item, 1, task.trim());
-            // Display the new list
+            // Display the new array
             self.FetchTasks();
             // Hide fields
             CloseInput();
@@ -86,16 +86,20 @@ let app= new function()
     this.Counter= function(data)
     {
         let elem   = document.getElementById('counter');
-        let name = 'Tasks';
+        let name = 'tasks';
 
         if (data) {
+          document.getElementById('task_counter').style.display='block';
+          document.getElementById('todo-list-header').style.display='block';
             if(data ==1){
-                name = 'Task'
+                name = 'task'
             }
           elem.innerHTML = data + ' ' + name ;
         } 
         else {
-          elem.innerHTML = 'No ' + name;
+          document.getElementById('task_counter').style.display='none';
+          document.getElementById('todo-list-header').style.display='none';
+          elem.innerHTML = "you don't have " + name;
         }
 
     }

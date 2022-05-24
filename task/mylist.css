@@ -62,20 +62,18 @@ body
     color: white ;
     border: 2px solid red;
   }
-  th
-  {
-      text-align: left;
-  }
   td
   {
       background-color: aliceblue;
       padding: 10px;
       text-align: left;
 
+
   }
   #todo-list-header
   {
     display:block;
+    margin-left: 5%;
   }
   button {
     cursor: pointer;
@@ -86,4 +84,12 @@ body
     border-radius: 2px;
     color: black;
     border: 2px solid green;
+  }
+  #task_counter
+  {
+    display:block;
+  }
+  table
+  {
+    margin-left: 5%;
   }

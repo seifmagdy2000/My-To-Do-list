@@ -5,7 +5,7 @@
     </head>
     <body>
         <div class="title">
-            <h1>My to do list</h1>
+            <h1>My To-Do list</h1>
             <p>Thing to be done :</p>
         </div>
         <div class="form">
@@ -14,18 +14,16 @@
             <input type="text" id="add-todo" placeholder="Thing To-do" >
             <button type="submit" class="btn-Add">Add</button>
         </form>
-        <p>you have:</p>
+        <p id="task_counter">you have:</p>
         <p id="counter"></p>
+        </div>
+        <div class="to-do">
+             <h2 id="todo-list-header">To-Do:`</h2>
+        </div>
         <table>
-            <tr class="to-do">
-                <th>
-                     <h3 id="todo-list-header">To-Do</h3>
-                </th>
-            </tr>
                 <tbody id="tasks">
                 </tbody>
         </table>
-        </div>
         <div id="edit-box" role="area-hidden">
             <form action="javascript:void(0);" method="post" id="save-edit">
                 <input type="text" id="edit-todo">
