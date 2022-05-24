@@ -4,7 +4,7 @@ var storedTasks = JSON.parse(localStorage.getItem(`${uuid}`));
 if(storedTasks)
  tasks =storedTasks
  
-var app= new function()
+let app= new function()
 // arrays, functions, objects are objects
 {
     this.elem=document.getElementById('tasks');

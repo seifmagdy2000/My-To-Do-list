@@ -15,27 +15,26 @@ class User {
     }
 }
 
-
 function validate() {
     let storedUserData = JSON.parse(localStorage.getItem('userList'))
+    flag=0;
     console.log(storedUserData)
     var V_Email = document.getElementById("Email").value;
     var V_Password = document.getElementById("Password").value;
-    var flag = 0;
     for (i = 0; i < storedUserData.length; i++) {
         if (V_Email == storedUserData[i].email && V_Password == storedUserData[i].password) {
-            flag = 1;
             localStorage.setItem("uuid", `${V_Email}`)
             window.location.replace('./MyList.html')
-
-        }
+            flag=1;
+        }     
     }
-    else
+    if (flag==0)
+    {
     document.querySelector(".alert").classList.add('active');
-    document.querySelector(".alert").innerHTML += 'Wrong email or password';
+    document.querySelector(".alert").innerHTML = 'Wrong email or password';
+    }
 
 }
-flag = 0;
 function allLetter(inputtxt) {
     var letters = /^[A-Za-z]+$/;
     if (inputtxt.match(letters)) {
@@ -122,7 +121,7 @@ function Registration() {
         }
         console.log(document.querySelector(".alert"));
         document.querySelector(".alert").classList.add('active');
-        document.querySelector(".alert").innerHTML += msg;
+        document.querySelector(".alert").innerHTML = msg;
     }
     else {
         const userData = {
@@ -141,6 +140,8 @@ function Registration() {
         userList.push(userData);
         console.log(userList);
         localStorage.setItem('userList', JSON.stringify(userList));
+        alert("account is created");
+        window.location.replace('./index.html')
 
     }
 

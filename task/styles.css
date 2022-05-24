@@ -51,7 +51,6 @@ body
     font-size: 18px;
     outline: none;
     border: 1px solid silver;
-
 }
 
 .login_form button
@@ -95,6 +94,7 @@ body
 }
  .alert {
     padding: 20px;
+    width: 310px;
     background-color: red; /* Red */
     color: white;
     margin-bottom: 15px;
